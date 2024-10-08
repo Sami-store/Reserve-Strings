@@ -1,0 +1,71 @@
+//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
+// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+/*
+ * File name: ReverseStrings
+ * Short description: Reverse a set of strings.
+ * @author Samuel Melenciuc
+ * details of the revision: none
+ */
+
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in); //Using scanner to input from user
+
+        //Asking user for input
+        System.out.println("Please enter a three character string");
+        String first = in.next();
+        if(first.length() != 3){    //Checking if the string contains 3 characters
+            System.out.println("Error");
+            return;     //Exists program if length is not 3 characters
+        }
+
+        //Asking user for 4 characters this time
+        System.out.println("Please enter a four character string");
+        String second = in.next();
+        if(second.length() != 4){
+            System.out.println("Error");
+            return;
+        }
+
+        //Printing regular order
+        System.out.println("The two strings you entered are: " + first + " " + second + ".\n");
+
+        //Using charAt to store each character and then using it in reverse
+        char zero = first.charAt(0);
+        char one = first.charAt(1);
+        char two = first.charAt(2);
+        char three = second.charAt(0);
+        char four = second.charAt(1);
+        char five = second.charAt(2);
+        char six = second.charAt(3);
+        //Printing reverse order
+        System.out.println("The two strings in reverse are: " + six + five + four + three + " " + two + one + zero + ".");
+
+
+        /* Test output 1
+        Please enter a three character string
+        abc
+        Please enter a four character string
+        defg
+        The two strings you entered are: abc defg.
+
+        The two strings in reverse are: gfed cba.
+
+
+        Test Output 2
+        Please enter a three character string
+        abc
+        Please enter a four character string
+        ab
+        Error
+
+
+        Test Output 3
+        Please enter a three character string
+        abcd
+        Error
+
+         */
+    }
+}
